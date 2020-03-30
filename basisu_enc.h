@@ -515,7 +515,7 @@ namespace basisu
 		std::condition_variable m_has_work;
 		std::condition_variable m_no_more_jobs;
 		
-		uint32_t m_num_active_jobs;
+		std::atomic<uint32_t> m_num_active_jobs;
 		
 		std::atomic<bool> m_kill_flag;
 
